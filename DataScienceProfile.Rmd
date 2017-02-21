@@ -1,0 +1,22 @@
+---
+title: "DataScienceProfile"
+author: "squazi"
+date: "February 21, 2017"
+output: 
+  html_document:
+  keep_md: true
+---
+# Raw Data
+```{r}
+Category <-c('computer programming', 'math', 'statistics', 'machine learning', 'domain expertise', 'communication and presentation skills', 'data visualization')
+Ranking <-c(1, 2, 2, 2, 5, 5, 5)
+Sunna <-data.frame(Category, Ranking)
+Sunna
+```
+
+# Bar Graph Representation
+```{r}
+cat.freq <-table(rep(Category, Ranking))
+barplot(cat.freq, main = "Sunna", xlab = "Category", ylab = "Ranking", names.arg=c("Comm", "Prog", "Dom", "Viz", "Mach", "Math", "Stats")) 
+```
+
